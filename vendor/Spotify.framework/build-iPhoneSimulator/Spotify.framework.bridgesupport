@@ -1,0 +1,1452 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type='NSString*' name='SPTAudioStreamingMetadataAlbumName' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAudioStreamingMetadataAlbumURI' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAudioStreamingMetadataArtistName' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAudioStreamingMetadataArtistURI' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAudioStreamingMetadataTrackDuration' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAudioStreamingMetadataTrackName' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAudioStreamingMetadataTrackURI' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAuthPlaylistModifyPrivateScope' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAuthPlaylistModifyPublicScope' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAuthPlaylistReadPrivateScope' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAuthStreamingScope' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAuthUserLibraryModifyScope' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAuthUserLibraryReadScope' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAuthUserReadEmailScope' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTAuthUserReadPrivateScope' type='@'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeAlreadyInitialized' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeApplicationBanned' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeBadCredentials' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeFailed' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeGeneralLoginError' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeGeneralPlaybackError' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeInitFailed' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeInvalidArgument' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeNeedsPremium' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeNoError' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeNotActiveDevice' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeNullArgument' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodePlaybackRateLimited' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeTrackUnavailable' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeTravelRestriction' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeUninitialized' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeUnsupported' type='i' type64='q'/>
+<constant const='true' declared_type='NSInteger' name='SPTErrorCodeWrongAPIVersion' type='i' type64='q'/>
+<constant const='true' declared_type='NSString*' name='SPTPlaylistSnapshotNameKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SPTPlaylistSnapshotPublicKey' type='@'/>
+<enum name='SPTAlbumTypeAlbum' value='0'/>
+<enum name='SPTAlbumTypeAppearsOn' value='3'/>
+<enum name='SPTAlbumTypeCompilation' value='2'/>
+<enum name='SPTAlbumTypeSingle' value='1'/>
+<enum name='SPTBitrateHigh' value='2'/>
+<enum name='SPTBitrateLow' value='0'/>
+<enum name='SPTBitrateNormal' value='1'/>
+<enum name='SPTProductFree' value='0'/>
+<enum name='SPTProductPremium' value='2'/>
+<enum name='SPTProductUnknown' value='3'/>
+<enum name='SPTProductUnlimited' value='1'/>
+<enum name='SPTQueryTypeAlbum' value='2'/>
+<enum name='SPTQueryTypeArtist' value='1'/>
+<enum name='SPTQueryTypeTrack' value='0'/>
+<class name='NSObject'>
+<method selector='audioStreaming:didChangePlaybackStatus:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='BOOL' index='1' name='isPlaying' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didChangeRepeatStatus:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='BOOL' index='1' name='isRepeated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didChangeShuffleStatus:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='BOOL' index='1' name='isShuffled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didChangeToTrack:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='trackMetadata' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didChangeVolume:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='SPTVolume' index='1' name='volume' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didEncounterError:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didFailToPlayTrack:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSURL*' index='1' name='trackUri' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didReceiveMessage:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSString*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didSeekToOffset:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSTimeInterval' index='1' name='offset' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didStartPlayingTrack:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSURL*' index='1' name='trackUri' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didStopPlayingTrack:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSURL*' index='1' name='trackUri' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidBecomeActivePlaybackDevice:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidBecomeInactivePlaybackDevice:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidDisconnect:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidEncounterTemporaryConnectionError:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidLogin:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidLogout:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidLosePermissionForPlayback:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidPopQueue:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidReconnect:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidSkipToNextTrack:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidSkipToPreviousTrack:'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='coreAudioController:didOutputAudioOfDuration:'>
+<arg declared_type='SPTCoreAudioController*' index='0' name='controller' type='@'/>
+<arg declared_type='NSTimeInterval' index='1' name='audioDuration' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='decodedJSONObject'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithDecodedJSONObject:error:'>
+<arg declared_type='id' index='0' name='decodedObject' type='@'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='playableUri'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='tracksForPlayback'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='uri'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<class name='SPTAlbum'>
+<method class_method='true' selector='albumWithURI:session:callback:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='albumsWithURIs:session:callback:'>
+<arg declared_type='NSArray*' index='0' name='uris' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='artists'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='externalIds'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='firstTrackPage'>
+<retval declared_type='SPTListPage*' type='@'/>
+</method>
+<method selector='genres'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='isAlbumURI:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='popularity'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='releaseDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='releaseYear'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+</class>
+<class name='SPTArtist'>
+<method class_method='true' selector='artistWithURI:session:callback:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='artistsWithURIs:session:callback:'>
+<arg declared_type='NSArray*' index='0' name='uris' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='externalIds'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='followerCount'>
+<retval declared_type='long' type='l' type64='q'/>
+</method>
+<method selector='genres'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='images'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='isArtistURI:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='largestImage'>
+<retval declared_type='SPTImage*' type='@'/>
+</method>
+<method selector='popularity'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='requestAlbumsOfType:withSession:availableInTerritory:callback:'>
+<arg declared_type='SPTAlbumType' index='0' name='type' type='I' type64='Q'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='NSString*' index='2' name='territory' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='3' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestRelatedArtists:callback:'>
+<arg declared_type='SPTSession*' index='0' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestTopTracksForTerritory:withSession:callback:'>
+<arg declared_type='NSString*' index='0' name='territory' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='smallestImage'>
+<retval declared_type='SPTImage*' type='@'/>
+</method>
+</class>
+<class name='SPTAudioStreamingController'>
+<method selector='currentPlaybackPosition'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='currentTrackMetadata'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='diskCacheSizeLimit'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='getAbsoluteTrackMetadata:callback:'>
+<arg declared_type='int' index='0' name='index' type='i'/>
+<arg declared_type='void (^)(NSDictionary *)' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getRelativeTrackMetadata:callback:'>
+<arg declared_type='int' index='0' name='index' type='i'/>
+<arg declared_type='void (^)(NSDictionary *)' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithClientId:'>
+<arg declared_type='NSString*' index='0' name='clientId' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithClientId:audioController:'>
+<arg declared_type='NSString*' index='0' name='clientId' type='@'/>
+<arg declared_type='SPTCoreAudioController*' index='1' name='audioController' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isPlaying'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loggedIn'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loginWithSession:callback:'>
+<arg declared_type='SPTSession*' index='0' name='session' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='logout:'>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='0' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='new'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='playTrackProvider:callback:'>
+<arg declared_type='id' index='0' name='provider' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='playTrackProvider:fromIndex:callback:'>
+<arg declared_type='id' index='0' name='provider' type='@'/>
+<arg declared_type='int' index='1' name='index' type='i'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='playURI:callback:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='playURI:fromIndex:callback:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<arg declared_type='int' index='1' name='index' type='i'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='playURIs:fromIndex:callback:'>
+<arg declared_type='NSArray*' index='0' name='uris' type='@'/>
+<arg declared_type='int' index='1' name='index' type='i'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='playURIsFromIndex:callback:'>
+<arg declared_type='int' index='0' name='index' type='i'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='playbackDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='queueClear:'>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='0' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='queuePlay:'>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='0' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='queueSize'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='queueTrackProvider:clearQueue:callback:'>
+<arg declared_type='id' index='0' name='provider' type='@'/>
+<arg declared_type='BOOL' index='1' name='clear' type='B'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='queueURI:callback:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='queueURI:clearQueue:callback:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<arg declared_type='BOOL' index='1' name='clear' type='B'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='queueURIs:clearQueue:callback:'>
+<arg declared_type='NSArray*' index='0' name='uris' type='@'/>
+<arg declared_type='BOOL' index='1' name='clear' type='B'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='repeat'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='seekToOffset:callback:'>
+<arg declared_type='NSTimeInterval' index='0' name='offset' type='d'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDiskCacheSizeLimit:'>
+<arg declared_type='NSUInteger' index='0' name='diskCacheSizeLimit' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIsPlaying:callback:'>
+<arg declared_type='BOOL' index='0' name='playing' type='B'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlaybackDelegate:'>
+<arg declared_type='id' index='0' name='playbackDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRepeat:'>
+<arg declared_type='BOOL' index='0' name='repeat' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShuffle:'>
+<arg declared_type='BOOL' index='0' name='shuffle' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTargetBitrate:callback:'>
+<arg declared_type='SPTBitrate' index='0' name='bitrate' type='I' type64='Q'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTrackListPosition:'>
+<arg declared_type='int' index='0' name='trackListPosition' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setURIs:callback:'>
+<arg declared_type='NSArray*' index='0' name='uris' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVolume:callback:'>
+<arg declared_type='SPTVolume' index='0' name='volume' type='d'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shuffle'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='skipNext:'>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='0' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='skipPrevious:'>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='0' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stop:'>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='0' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='targetBitrate'>
+<retval declared_type='SPTBitrate' type='I' type64='Q'/>
+</method>
+<method selector='trackListPosition'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='trackListSize'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='volume'>
+<retval declared_type='SPTVolume' type='d'/>
+</method>
+</class>
+<class name='SPTAuth'>
+<method selector='canHandleURL:withDeclaredRedirectURL:'>
+<arg declared_type='NSURL*' index='0' name='callbackURL' type='@'/>
+<arg declared_type='NSURL*' index='1' name='declaredURL' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='defaultInstance'>
+<retval declared_type='SPTAuth*' type='@'/>
+</method>
+<method selector='handleAuthCallbackWithTriggeredAuthURL:callback:'>
+<arg declared_type='NSURL*' index='0' name='url' type='@'/>
+<arg declared_type='SPTAuthCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SPTSession*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:'>
+<arg declared_type='NSURL*' index='0' name='url' type='@'/>
+<arg declared_type='NSURL*' index='1' name='tokenSwapURL' type='@'/>
+<arg declared_type='SPTAuthCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SPTSession*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loginURLForClientId:declaredRedirectURL:'>
+<arg declared_type='NSString*' index='0' name='clientId' type='@'/>
+<arg declared_type='NSURL*' index='1' name='declaredURL' type='@'/>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='loginURLForClientId:declaredRedirectURL:scopes:'>
+<arg declared_type='NSString*' index='0' name='clientId' type='@'/>
+<arg declared_type='NSURL*' index='1' name='declaredURL' type='@'/>
+<arg declared_type='NSArray*' index='2' name='scopes' type='@'/>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='loginURLForClientId:declaredRedirectURL:scopes:withResponseType:'>
+<arg declared_type='NSString*' index='0' name='clientId' type='@'/>
+<arg declared_type='NSURL*' index='1' name='declaredURL' type='@'/>
+<arg declared_type='NSArray*' index='2' name='scopes' type='@'/>
+<arg declared_type='NSString*' index='3' name='responseType' type='@'/>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='renewSession:withServiceEndpointAtURL:callback:'>
+<arg declared_type='SPTSession*' index='0' name='session' type='@'/>
+<arg declared_type='NSURL*' index='1' name='endpointURL' type='@'/>
+<arg declared_type='SPTAuthCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SPTSession*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='spotifyApplicationIsInstalled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='supportsApplicationAuthentication'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='SPTCircularBuffer'>
+<method selector='attemptAppendData:ofLength:'>
+<arg const='true' declared_type='void*' index='0' name='data' type='^v'/>
+<arg declared_type='NSUInteger' index='1' name='dataLength' type='I' type64='Q'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='attemptAppendData:ofLength:chunkSize:'>
+<arg const='true' declared_type='void*' index='0' name='data' type='^v'/>
+<arg declared_type='NSUInteger' index='1' name='dataLength' type='I' type64='Q'/>
+<arg declared_type='NSUInteger' index='2' name='chunkSize' type='I' type64='Q'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='clear'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithMaximumLength:'>
+<arg declared_type='NSUInteger' index='0' name='size' type='I' type64='Q'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='length'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='maximumLength'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='readDataOfLength:intoAllocatedBuffer:'>
+<arg declared_type='NSUInteger' index='0' name='desiredLength' type='I' type64='Q'/>
+<arg declared_type='void**' index='1' name='outBuffer' type='^^v'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+</class>
+<class name='SPTCoreAudioController'>
+<method selector='attemptToDeliverAudioFrames:ofCount:streamDescription:'>
+<arg const='true' declared_type='void*' index='0' name='audioFrames' type='^v'/>
+<arg declared_type='NSInteger' index='1' name='frameCount' type='i' type64='q'/>
+<arg declared_type='AudioStreamBasicDescription' index='2' name='audioDescription' type='{AudioStreamBasicDescription=dIIIIIIII}'/>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='audioOutputEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='backgroundPlaybackTask'>
+<retval declared_type='UIBackgroundTaskIdentifier' type='I' type64='Q'/>
+</method>
+<method selector='bytesInAudioBuffer'>
+<retval declared_type='uint32_t' type='I'/>
+</method>
+<method selector='clearAudioBuffers'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='connectOutputBus:ofNode:toInputBus:ofNode:inGraph:error:'>
+<arg declared_type='UInt32' index='0' name='sourceOutputBusNumber' type='L' type64='I'/>
+<arg declared_type='AUNode' index='1' name='sourceNode' type='l' type64='i'/>
+<arg declared_type='UInt32' index='2' name='destinationInputBusNumber' type='L' type64='I'/>
+<arg declared_type='AUNode' index='3' name='destinationNode' type='l' type64='i'/>
+<arg declared_type='AUGraph' index='4' name='graph' type='^{OpaqueAUGraph=}'/>
+<arg declared_type='NSError**' index='5' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='disposeOfCustomNodesInGraph:'>
+<arg declared_type='AUGraph' index='0' name='graph' type='^{OpaqueAUGraph=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAudioOutputEnabled:'>
+<arg declared_type='BOOL' index='0' name='audioOutputEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundPlaybackTask:'>
+<arg declared_type='UIBackgroundTaskIdentifier' index='0' name='backgroundPlaybackTask' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVolume:'>
+<arg declared_type='double' index='0' name='volume' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='volume'>
+<retval declared_type='double' type='d'/>
+</method>
+</class>
+<class name='SPTFeaturedPlaylistList'>
+<method selector='message'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='SPTImage'>
+<method selector='imageURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='size'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+</class>
+<class name='SPTJSONDecoding'>
+<method class_method='true' selector='SPObjectFromDecodedJSON:error:'>
+<arg declared_type='id' index='0' name='decodedJson' type='@'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='SPObjectFromEncodedJSON:error:'>
+<arg declared_type='NSData*' index='0' name='json' type='@'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='partialSPObjectFromDecodedJSON:error:'>
+<arg declared_type='id' index='0' name='decodedJson' type='@'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='partialSPObjectFromEncodedJSON:error:'>
+<arg declared_type='NSData*' index='0' name='json' type='@'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='SPTJSONObjectBase'>
+<method selector='decodedJSONObject'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setDecodedJSONObject:'>
+<arg declared_type='id' index='0' name='decodedJSONObject' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SPTListPage'>
+<method selector='hasNextPage'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='hasPreviousPage'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isComplete'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='items'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='pageByAppendingPage:'>
+<arg declared_type='SPTListPage*' index='0' name='nextPage' type='@'/>
+<retval declared_type='SPTListPage*' type='@'/>
+</method>
+<method selector='range'>
+<retval declared_type='NSRange' type='{_NSRange=II}' type64='{_NSRange=QQ}'/>
+</method>
+<method selector='requestNextPageWithSession:callback:'>
+<arg declared_type='SPTSession*' index='0' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestPreviousPageWithSession:callback:'>
+<arg declared_type='SPTSession*' index='0' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='totalListLength'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+</class>
+<class name='SPTPartialAlbum'>
+<method selector='availableTerritories'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='covers'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='largestCover'>
+<retval declared_type='SPTImage*' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='playableUri'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='sharingURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='smallestCover'>
+<retval declared_type='SPTImage*' type='@'/>
+</method>
+<method selector='type'>
+<retval declared_type='SPTAlbumType' type='I' type64='Q'/>
+</method>
+<method selector='uri'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<class name='SPTPartialArtist'>
+<method selector='identifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='playableUri'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='sharingURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<class name='SPTPartialPlaylist'>
+<method selector='images'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='isCollaborative'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isPublic'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='largestImage'>
+<retval declared_type='SPTImage*' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='owner'>
+<retval declared_type='SPTUser*' type='@'/>
+</method>
+<method selector='playableUri'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='smallestImage'>
+<retval declared_type='SPTImage*' type='@'/>
+</method>
+<method selector='trackCount'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='uri'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<class name='SPTPartialTrack'>
+<method selector='artists'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='availableTerritories'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='discNumber'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='duration'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='flaggedExplicit'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='playableUri'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='previewURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='sharingURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='trackNumber'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+</class>
+<class name='SPTPlaylistList'>
+<method selector='createPlaylistWithName:publicFlag:session:callback:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<arg declared_type='BOOL' index='1' name='isPublic' type='B'/>
+<arg declared_type='SPTSession*' index='2' name='session' type='@'/>
+<arg declared_type='SPTPlaylistCreationCallback' function_pointer='true' index='3' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SPTPlaylistSnapshot*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SPTPlaylistSnapshot'>
+<method selector='addTracksToPlaylist:withSession:callback:'>
+<arg declared_type='NSArray*' index='0' name='tracks' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addTracksWithPositionToPlaylist:withPosition:withSession:callback:'>
+<arg declared_type='NSArray*' index='0' name='tracks' type='@'/>
+<arg declared_type='int' index='1' name='position' type='i'/>
+<arg declared_type='SPTSession*' index='2' name='session' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='3' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='changePlaylistDetails:withSession:callback:'>
+<arg declared_type='NSDictionary*' index='0' name='data' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='descriptionText'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='firstTrackPage'>
+<retval declared_type='SPTListPage*' type='@'/>
+</method>
+<method selector='followerCount'>
+<retval declared_type='long' type='l' type64='q'/>
+</method>
+<method class_method='true' selector='isPlaylistURI:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isStarredURI:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='playlistWithURI:session:callback:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='playlistsWithURIs:session:callback:'>
+<arg declared_type='NSArray*' index='0' name='uris' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeTracksFromPlaylist:withSession:callback:'>
+<arg declared_type='NSArray*' index='0' name='tracks' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeTracksWithPositionsFromPlaylist:withSession:callback:'>
+<arg declared_type='NSArray*' index='0' name='tracks' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='replaceTracksInPlaylist:withSession:callback:'>
+<arg declared_type='NSArray*' index='0' name='tracks' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTErrorableOperationCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='snapshotId'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='SPTPlaylistTrack'>
+<method selector='addedAt'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='addedBy'>
+<retval declared_type='SPTUser*' type='@'/>
+</method>
+</class>
+<class name='SPTRequest'>
+<method class_method='true' selector='performSearchWithQuery:queryType:offset:session:callback:'>
+<arg declared_type='NSString*' index='0' name='searchQuery' type='@'/>
+<arg declared_type='SPTSearchQueryType' index='1' name='searchQueryType' type='I' type64='Q'/>
+<arg declared_type='NSInteger' index='2' name='offset' type='i' type64='q'/>
+<arg declared_type='SPTSession*' index='3' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='4' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='performSearchWithQuery:queryType:offset:session:market:callback:'>
+<arg declared_type='NSString*' index='0' name='searchQuery' type='@'/>
+<arg declared_type='SPTSearchQueryType' index='1' name='searchQueryType' type='I' type64='Q'/>
+<arg declared_type='NSInteger' index='2' name='offset' type='i' type64='q'/>
+<arg declared_type='SPTSession*' index='3' name='session' type='@'/>
+<arg declared_type='NSString*' index='4' name='market' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='5' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='performSearchWithQuery:queryType:session:callback:'>
+<arg declared_type='NSString*' index='0' name='searchQuery' type='@'/>
+<arg declared_type='SPTSearchQueryType' index='1' name='searchQueryType' type='I' type64='Q'/>
+<arg declared_type='SPTSession*' index='2' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='3' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='performSearchWithQuery:queryType:session:market:callback:'>
+<arg declared_type='NSString*' index='0' name='searchQuery' type='@'/>
+<arg declared_type='SPTSearchQueryType' index='1' name='searchQueryType' type='I' type64='Q'/>
+<arg declared_type='SPTSession*' index='2' name='session' type='@'/>
+<arg declared_type='NSString*' index='3' name='market' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='4' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='playlistsForUserInSession:callback:'>
+<arg declared_type='SPTSession*' index='0' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='removeTracksFromSaved:forUserInSession:callback:'>
+<arg declared_type='NSArray*' index='0' name='tracks' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='requestFeaturedPlaylistsForCountry:limit:offset:locale:timestamp:session:callback:'>
+<arg declared_type='NSString*' index='0' name='country' type='@'/>
+<arg declared_type='NSInteger' index='1' name='limit' type='i' type64='q'/>
+<arg declared_type='NSInteger' index='2' name='offset' type='i' type64='q'/>
+<arg declared_type='NSString*' index='3' name='locale' type='@'/>
+<arg declared_type='NSDate*' index='4' name='timestamp' type='@'/>
+<arg declared_type='SPTSession*' index='5' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='6' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='requestItemAtURI:withSession:callback:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='requestItemFromPartialObject:withSession:callback:'>
+<arg declared_type='id' index='0' name='partialObject' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='requestNewReleasesForCountry:limit:offset:session:callback:'>
+<arg declared_type='NSString*' index='0' name='country' type='@'/>
+<arg declared_type='NSInteger' index='1' name='limit' type='i' type64='q'/>
+<arg declared_type='NSInteger' index='2' name='offset' type='i' type64='q'/>
+<arg declared_type='SPTSession*' index='3' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='4' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='saveTracks:forUserInSession:callback:'>
+<arg declared_type='NSArray*' index='0' name='tracks' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='savedTracksContains:forUserInSession:callback:'>
+<arg declared_type='NSArray*' index='0' name='tracks' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='savedTracksForUserInSession:callback:'>
+<arg declared_type='SPTSession*' index='0' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='starredListForUserInSession:callback:'>
+<arg declared_type='SPTSession*' index='0' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='userInformationForUserInSession:callback:'>
+<arg declared_type='SPTSession*' index='0' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SPTSavedTrack'>
+<method selector='addedAt'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+</class>
+<class name='SPTSession'>
+<method selector='accessToken'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='canonicalUsername'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='encryptedRefreshToken'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='expirationDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='initWithUserName:accessToken:encryptedRefreshToken:expirationDate:'>
+<arg declared_type='NSString*' index='0' name='userName' type='@'/>
+<arg declared_type='NSString*' index='1' name='accessToken' type='@'/>
+<arg declared_type='NSString*' index='2' name='encryptedRefreshToken' type='@'/>
+<arg declared_type='NSDate*' index='3' name='expirationDate' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithUserName:accessToken:expirationDate:'>
+<arg declared_type='NSString*' index='0' name='userName' type='@'/>
+<arg declared_type='NSString*' index='1' name='accessToken' type='@'/>
+<arg declared_type='NSDate*' index='2' name='expirationDate' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithUserName:accessToken:expirationTimeInterval:'>
+<arg declared_type='NSString*' index='0' name='userName' type='@'/>
+<arg declared_type='NSString*' index='1' name='accessToken' type='@'/>
+<arg declared_type='NSTimeInterval' index='2' name='timeInterval' type='d'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isValid'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='tokenType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='SPTTrack'>
+<method selector='album'>
+<retval declared_type='SPTPartialAlbum*' type='@'/>
+</method>
+<method selector='externalIds'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='isTrackURI:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='popularity'>
+<retval declared_type='double' type='d'/>
+</method>
+<method class_method='true' selector='trackWithURI:session:callback:'>
+<arg declared_type='NSURL*' index='0' name='uri' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='tracksWithURIs:session:callback:'>
+<arg declared_type='NSArray*' index='0' name='uris' type='@'/>
+<arg declared_type='SPTSession*' index='1' name='session' type='@'/>
+<arg declared_type='SPTRequestCallback' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SPTUser'>
+<method selector='canonicalUserName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='displayName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='emailAddress'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='followerCount'>
+<retval declared_type='long' type='l' type64='q'/>
+</method>
+<method selector='images'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='largestImage'>
+<retval declared_type='SPTImage*' type='@'/>
+</method>
+<method selector='product'>
+<retval declared_type='SPTProduct' type='I' type64='Q'/>
+</method>
+<method selector='sharingURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='smallestImage'>
+<retval declared_type='SPTImage*' type='@'/>
+</method>
+<method selector='territory'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='uri'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<informal_protocol name='SPTAudioStreamingDelegate'>
+<method selector='audioStreaming:didEncounterError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didReceiveMessage:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSString*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidDisconnect:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidEncounterTemporaryConnectionError:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidLogin:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidLogout:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidReconnect:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SPTAudioStreamingPlaybackDelegate'>
+<method selector='audioStreaming:didChangePlaybackStatus:' type='v16@0:4@8B12' type64='v28@0:8@16B24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='BOOL' index='1' name='isPlaying' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didChangeRepeatStatus:' type='v16@0:4@8B12' type64='v28@0:8@16B24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='BOOL' index='1' name='isRepeated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didChangeShuffleStatus:' type='v16@0:4@8B12' type64='v28@0:8@16B24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='BOOL' index='1' name='isShuffled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didChangeToTrack:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='trackMetadata' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didChangeVolume:' type='v20@0:4@8d12' type64='v32@0:8@16d24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='SPTVolume' index='1' name='volume' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didFailToPlayTrack:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSURL*' index='1' name='trackUri' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didSeekToOffset:' type='v20@0:4@8d12' type64='v32@0:8@16d24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSTimeInterval' index='1' name='offset' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didStartPlayingTrack:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSURL*' index='1' name='trackUri' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreaming:didStopPlayingTrack:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<arg declared_type='NSURL*' index='1' name='trackUri' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidBecomeActivePlaybackDevice:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidBecomeInactivePlaybackDevice:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidLosePermissionForPlayback:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidPopQueue:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidSkipToNextTrack:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='audioStreamingDidSkipToPreviousTrack:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SPTAudioStreamingController*' index='0' name='audioStreaming' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SPTCoreAudioControllerDelegate'>
+<method selector='coreAudioController:didOutputAudioOfDuration:' type='v20@0:4@8d12' type64='v32@0:8@16d24'>
+<arg declared_type='SPTCoreAudioController*' index='0' name='controller' type='@'/>
+<arg declared_type='NSTimeInterval' index='1' name='audioDuration' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SPTJSONObject'>
+<method selector='decodedJSONObject' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithDecodedJSONObject:error:' type='@16@0:4@8^@12' type64='@32@0:8@16^@24'>
+<arg declared_type='id' index='0' name='decodedObject' type='@'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='id' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SPTPartialObject'>
+<method selector='name' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='uri' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SPTTrackProvider'>
+<method selector='playableUri' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='tracksForPlayback' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</informal_protocol>
+</signatures>
