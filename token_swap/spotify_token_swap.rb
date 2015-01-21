@@ -6,9 +6,9 @@ require 'json'
 require 'encrypted_strings'
 require "bundler/setup"
 
-CLIENT_ID = "3edb3fcb3fa34d46b9f0cedff6ccfb60"
-CLIENT_SECRET = "a116c44b322147d0aa99757e58ca552e"
-ENCRYPTION_SECRET = "cFJLyifeUJUBFWdHzVbykfDmPHtLKLGzViHW9aHGmyTLD8hGXC"
+CLIENT_ID = "###"
+CLIENT_SECRET = "###"
+ENCRYPTION_SECRET = "###"
 CLIENT_CALLBACK_URL = "karaoke-genius-spotify://"
 AUTH_HEADER = "Basic " + Base64.strict_encode64(CLIENT_ID + ":" + CLIENT_SECRET)
 SPOTIFY_ACCOUNTS_ENDPOINT = URI.parse("https://accounts.spotify.com")
