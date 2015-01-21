@@ -1,0 +1,7 @@
+API_ENV:
+  dev:
+    HOST: 'http://localhost:1234'
+    CLIENT_ID: "SPOTIFY CLIENT ID"
+  prod:
+    HOST: 'https://karaoke-genius.herokuapp.com'
+    CLIENT_ID: "SPOTIFY CLIENT ID"

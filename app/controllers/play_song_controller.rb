@@ -7,4 +7,9 @@ class PlaySongController < SPTAudioStreamingController
     self
   end
 
+  def clear
+    stop(proc{|error| })
+    queueClear(proc {|error|})
+  end
+
 end
